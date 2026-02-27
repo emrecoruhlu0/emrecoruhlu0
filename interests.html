@@ -1,52 +1,71 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>İlgi Alanlarım</title>
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>İlgi Alanlarım | Emre</title>
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
 
-<h1>İlgi Alanlarım</h1>
+<div id="progressBar"></div>
 
-<nav>
-    <a href="index.html">Ana Sayfa</a> |
-    <a href="about.html">Hakkımda</a> |
-    <a href="interests.html">İlgi Alanlarım</a> |
-    <a href="contact.html">İletişim</a>
-</nav>
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html"><span class="dot"></span><span>Emre Çoruhlu</span></a>
+    <div class="navlinks">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="about.html">Hakkımda</a>
+      <a href="interests.html">İlgi Alanlarım</a>
+      <a href="contact.html">İletişim</a>
+      <button class="btn icon" id="themeBtn" type="button">🌓</button>
+    </div>
+  </div>
+</header>
 
-<hr>
+<section class="section container">
+  <div class="sectionHeader">
+    <h2>İlgi Alanlarım</h2>
+    <div class="tools"><span class="pill">✨ Liste + tanım listesi</span></div>
+  </div>
 
-<h2>Teknoloji Alanındaki İlgi Alanlarım</h2>
-<ul>
-    <li>Web geliştirme</li>
-    <li>Yapay zeka</li>
-    <li>Gömülü sistemler</li>
-    <li>Mobil uygulama geliştirme</li>
-</ul>
+  <div class="grid" style="grid-template-columns:repeat(2,1fr);">
+    <div class="card reveal" style="padding:16px;">
+      <h3 style="margin-top:0;">Teknoloji</h3>
+      <ul class="muted">
+        <li>Web geliştirme</li>
+        <li>Gömülü sistemler (ESP32, Raspberry Pi)</li>
+        <li>Bilgisayarlı görü</li>
+        <li>Veri + otomasyon</li>
+      </ul>
+    </div>
 
-<h2>Günlük Çalışma Rutinim</h2>
-<ol>
-    <li>Ders çalışmak</li>
-    <li>Kod yazmak</li>
-    <li>Yeni teknolojiler araştırmak</li>
-    <li>Proje geliştirmek</li>
-</ol>
+    <div class="card reveal" style="padding:16px;">
+      <h3 style="margin-top:0;">Rutin</h3>
+      <ol class="muted">
+        <li>Küçük hedef</li>
+        <li>Hızlı prototip</li>
+        <li>Test & düzeltme</li>
+        <li>Paylaş (GitHub)</li>
+      </ol>
+    </div>
+  </div>
 
-<h2>Web Teknolojileri</h2>
-<dl>
-    <dt>HTML</dt>
-    <dd>Web sayfasının iskeletini oluşturur.</dd>
+  <div class="card reveal" style="padding:16px; margin-top:16px;">
+    <h3 style="margin-top:0;">Web Teknolojileri (dl)</h3>
+    <dl class="muted">
+      <dt><strong>HTML</strong></dt>
+      <dd>Sayfanın iskeleti</dd>
+      <dt><strong>CSS</strong></dt>
+      <dd>Görünüm ve düzen</dd>
+      <dt><strong>JavaScript</strong></dt>
+      <dd>Etkileşim ve dinamik davranış</dd>
+    </dl>
+  </div>
+</section>
 
-    <dt>CSS</dt>
-    <dd>Sayfanın görünümünü düzenler.</dd>
-
-    <dt>JavaScript</dt>
-    <dd>Sayfaya etkileşim kazandırır.</dd>
-</dl>
-
-<a href="index.html">Ana sayfaya geri dön</a>
-
+<button id="toTop" type="button" title="Yukarı">⬆️</button>
+<div id="toast"></div>
+<script src="scripts/app.js"></script>
 </body>
 </html>

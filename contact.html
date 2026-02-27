@@ -1,39 +1,66 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>İletişim</title>
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>İletişim | Emre</title>
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
 
-<h1>İletişim</h1>
+<div id="progressBar"></div>
 
-<nav>
-    <a href="index.html">Ana Sayfa</a> |
-    <a href="about.html">Hakkımda</a> |
-    <a href="interests.html">İlgi Alanlarım</a> |
-    <a href="contact.html">İletişim</a>
-</nav>
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html"><span class="dot"></span><span>Emre Çoruhlu</span></a>
+    <div class="navlinks">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="about.html">Hakkımda</a>
+      <a href="interests.html">İlgi Alanlarım</a>
+      <a href="contact.html">İletişim</a>
+      <button class="btn icon" id="themeBtn" type="button">🌓</button>
+    </div>
+  </div>
+</header>
 
-<hr>
+<section class="section container">
+  <div class="grid" style="grid-template-columns: 1.1fr .9fr;">
+    <div class="card reveal" style="padding:18px;">
+      <h2 style="margin-top:0;">Mesaj bırak</h2>
+      <p class="muted">GitHub Pages backend çalıştırmaz; ama bu form seni mail uygulamasına yönlendirir.</p>
 
-<h2>İletişim Bilgilerim</h2>
+      <form id="contactForm" class="formGrid">
+        <input id="c_name" type="text" placeholder="Adın" required />
+        <input id="c_subject" type="text" placeholder="Konu" required />
+        <textarea id="c_msg" rows="6" placeholder="Mesajın" required></textarea>
 
-<p>E-posta: <a href="mailto:emre@example.com">emre@example.com</a></p>
-<p>Telefon: +90 555 555 55 55</p>
-<p>GitHub: <a href="https://github.com/">GitHub Profilim</a></p>
-<p>LinkedIn: <a href="https://linkedin.com/">LinkedIn Profilim</a></p>
+        <div class="formActions">
+          <button class="btn primary" type="submit">📩 Mail ile gönder</button>
+          <small class="help">scripts/app.js içindeki mail adresini değiştir.</small>
+        </div>
+      </form>
+    </div>
 
-<h2>Sık Sorulan Sorular</h2>
+    <div class="card reveal" style="padding:18px;">
+      <h2 style="margin-top:0;">Bağlantılar</h2>
+      <p class="muted">Hızlıca ulaşmak için:</p>
+      <div class="grid">
+        <a class="btn" href="mailto:emre@example.com">✉️ emre@example.com</a>
+        <a class="btn" href="https://github.com/">🐙 GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/">💼 LinkedIn</a>
+      </div>
 
-<p><strong>Mesajlara ne kadar sürede dönüş yapıyorsunuz?</strong><br>
-Genellikle 24 saat içinde dönüş yapıyorum.</p>
+      <div style="margin-top:16px;">
+        <h3 style="margin:0 0 8px;">SSS</h3>
+        <p class="muted"><strong>Dönüş süresi?</strong><br/>Genelde 24 saat.</p>
+        <p class="muted"><strong>İş birliği?</strong><br/>Evet, proje bazlı konuşulur.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-<p><strong>Projelerde iş birliğine açık mısınız?</strong><br>
-Evet, özellikle yazılım projelerinde iş birliklerine açığım.</p>
-
-<a href="index.html">Ana sayfaya geri dön</a>
-
+<button id="toTop" type="button" title="Yukarı">⬆️</button>
+<div id="toast"></div>
+<script src="scripts/app.js"></script>
 </body>
 </html>

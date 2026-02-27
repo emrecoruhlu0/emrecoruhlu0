@@ -1,43 +1,68 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>Hakkımda</title>
-    <link rel="stylesheet" href="styles/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hakkımda | Emre</title>
+  <link rel="stylesheet" href="styles/style.css" />
 </head>
 <body>
 
-<h1>Hakkımda</h1>
+<div id="progressBar"></div>
 
-<nav>
-    <a href="index.html">Ana Sayfa</a> |
-    <a href="about.html">Hakkımda</a> |
-    <a href="interests.html">İlgi Alanlarım</a> |
-    <a href="contact.html">İletişim</a>
-</nav>
+<header>
+  <div class="container nav">
+    <a class="brand" href="index.html"><span class="dot"></span><span>Emre Çoruhlu</span></a>
+    <div class="navlinks">
+      <a href="index.html">Ana Sayfa</a>
+      <a href="about.html">Hakkımda</a>
+      <a href="interests.html">İlgi Alanlarım</a>
+      <a href="contact.html">İletişim</a>
+      <button class="btn icon" id="themeBtn" type="button">🌓</button>
+    </div>
+  </div>
+</header>
 
-<hr>
+<section class="section container">
+  <div class="card reveal" style="padding:20px;">
+    <span class="pill">🎯 Kısa özet</span>
+    <h1 style="margin:10px 0;">Ben kimim?</h1>
+    <p class="muted" style="line-height:1.7;">
+      Bilgisayar mühendisliği tarafında sistem kurmayı, bio/AI tarafında ise “anlamlı veri” üretmeyi seviyorum.
+      En keyif aldığım kısım: <strong>bir fikri</strong> hızlı prototipe çevirip, <em>çalışan bir şeye</em> dönüştürmek.
+    </p>
 
-<p>
-Merhaba, ben <strong>Emre</strong>. Bilgisayar Mühendisliği öğrencisiyim.
-Web teknolojileri ve yazılım geliştirme ile ilgileniyorum.
-</p>
+    <blockquote class="card" style="margin:16px 0 0; padding:14px; border-left:4px solid var(--accent);">
+      "İyi ürün = iyi fikir + iyi detay + iyi teslimat."
+    </blockquote>
 
-<p>
-Özellikle <em>web geliştirme</em>, gömülü sistemler ve yapay zeka konularında
-kendimi geliştirmeye çalışıyorum.
-</p>
+    <div class="grid" style="grid-template-columns: repeat(2,1fr); margin-top:16px;">
+      <div class="card" style="padding:14px;">
+        <strong>Eğitim</strong>
+        <ul class="muted">
+          <li>Marmara Üniversitesi • Bilgisayar Müh.</li>
+          <li>İlgi: Bio + ML kesişimi</li>
+        </ul>
+      </div>
+      <div class="card" style="padding:14px;">
+        <strong>Hedef</strong>
+        <ul class="muted">
+          <li>Proje üretmek</li>
+          <li>Portfolyoyu büyütmek</li>
+          <li>Staj/iş fırsatları</li>
+        </ul>
+      </div>
+    </div>
 
-<blockquote>
-"İyi yazılmış bir program, sadece çalışan değil anlaşılabilir olandır."
-</blockquote>
+    <div style="margin-top:16px; display:flex; gap:10px; flex-wrap:wrap;">
+      <a class="btn primary" href="contact.html">İletişime geç</a>
+      <a class="btn" href="index.html#projeler">Projeler</a>
+    </div>
+  </div>
+</section>
 
-<h2>Eğitim</h2>
-<ul>
-    <li>Marmara Üniversitesi - Bilgisayar Mühendisliği</li>
-</ul>
-
-<a href="index.html">Ana sayfaya geri dön</a>
-
+<button id="toTop" type="button" title="Yukarı">⬆️</button>
+<div id="toast"></div>
+<script src="scripts/app.js"></script>
 </body>
 </html>
