@@ -44,6 +44,12 @@
         <label><input type="radio" name="iletisim" value="telefon" /> Bana telefonla ulaşın</label>
       </div>
 
+      <!-- Dinamik açılan alan -->
+      <div id="dynamicContactFields" style="display: none; margin-bottom: 16px; padding: 12px 16px; border-left: 3px solid var(--accent); background: rgba(0,0,0,.15); border-radius: 8px;">
+        <label id="dyLabel" for="dyInput" style="margin-bottom: 8px;">İletişim Bilgisi:</label>
+        <input type="text" id="dyInput" name="dyInput" placeholder="..." style="margin-bottom: 0;" />
+      </div>
+
       <label>İlgi Alanları / Yetenekler:</label>
       <div class="checkbox-group">
         <label><input type="checkbox" name="ilgi" value="html" /> HTML</label>

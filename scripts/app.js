@@ -117,6 +117,31 @@ function setActiveNav(){
   });
 }
 
+// İletişim Tercihi Fonksiyonu
+function initContactPreference() {
+  const radios = document.querySelectorAll('input[name="iletisim"]');
+  const container = document.getElementById("dynamicContactFields");
+  const label = document.getElementById("dyLabel");
+  const input = document.getElementById("dyInput");
+
+  if (!radios.length || !container || !label || !input) return;
+
+  radios.forEach(radio => {
+    radio.addEventListener("change", (e) => {
+      container.style.display = "block";
+      if (e.target.value === "eposta") {
+        label.textContent = "E-posta Adresi (İletişim İçin):";
+        input.type = "email";
+        input.placeholder = "ornek@mail.com";
+      } else if (e.target.value === "telefon") {
+        label.textContent = "Telefon Numarası:";
+        input.type = "tel";
+        input.placeholder = "05xx xxx xx xx";
+      }
+    });
+  });
+}
+
 window.addEventListener("load", ()=>{
   // hero typing
   const t = document.getElementById("typing");
@@ -128,6 +153,7 @@ window.addEventListener("load", ()=>{
   initReveal();
   initProjectFilter();
   initMailComposer();
+  initContactPreference();
   setActiveNav();
 
   const btn = document.getElementById("themeBtn");
