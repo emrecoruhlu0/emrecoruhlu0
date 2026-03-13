@@ -471,6 +471,26 @@ small.help{
   resize: vertical;
 }
 
+.contact-container select {
+  background-color: #1a2340;
+  color: var(--text);
+}
+
+.contact-container select option {
+  background-color: #1a2340;
+  color: #e7ecff;
+}
+
+:root[data-theme="light"] .contact-container select {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
+:root[data-theme="light"] .contact-container select option {
+  background-color: #ffffff;
+  color: #0f172a;
+}
+
 /* Radio & Checkbox grupları */
 .radio-group,
 .checkbox-group {
